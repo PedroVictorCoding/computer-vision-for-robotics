@@ -13,7 +13,7 @@ while(1):
     hsv[...,0] = ang*180/np.pi/2
     hsv[...,2] = cv.normalize(mag,None,0,255,cv.NORM_MINMAX)
     bgr = cv.cvtColor(hsv,cv.COLOR_HSV2BGR)
-    cv.imshow('frame2',bgr)
+    cv.imshow('Simple Object Avoidance',bgr)
     k = cv.waitKey(30) & 0xff
     if k == 27:
         break
@@ -21,3 +21,4 @@ while(1):
         cv.imwrite('opticalfb.png',frame2)
         cv.imwrite('opticalhsv.png',bgr)
     prvs = next
+
